@@ -38,7 +38,7 @@ Alternatively, you can import the project into an IDE (such as Eclipse) and run 
   * SWORD defeats MAGIC_RING
   * MAGIC_RING defeats FIREBALL
 
-* If both players use the same weapon, there is no winner for that round.
+* If both players use the same weapon, the loser is the attacker.
 
 * If a player has no weapon available, they automatically lose the round.
 
