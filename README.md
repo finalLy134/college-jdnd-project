@@ -1,7 +1,3 @@
-Here’s a cleaner and more professional version of your README:
-
----
-
 # college-jdnd-project
 
 A simple turn-based DnD-style board game developed in Java as a college project.
