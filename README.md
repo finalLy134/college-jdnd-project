@@ -50,5 +50,3 @@ This project was created as part of a college assignment to practice:
 * Data structures (stack usage)
 * Game loop design
 * Basic turn-based mechanics
-
-If you'd like, I can also make it more GitHub-polished with sections like Features, Screenshots, or Future Improvements.
