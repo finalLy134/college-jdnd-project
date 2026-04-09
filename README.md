@@ -1,52 +1,45 @@
 # college-jdnd-project
 
-A simple turn-based DnD-style board game developed in Java as a college project.
-The project focuses on basic game logic, object-oriented design, and turn-based mechanics.
+A turn-based strategy game inspired by DnD mechanics, developed in Java.
+The project focuses on object-oriented design, game loop structure, and implementing data-driven gameplay systems.
 
 ## Requirements
 
-* JDK 21 (recommended)
+* JDK 21
 * Windows (for the provided `run.bat` file)
 
-The project was developed and compiled using JDK 21 in Eclipse IDE.
-If it does not run, make sure JDK 21 is installed or rebuild the project using your preferred IDE.
+The project was developed using JDK 21 in Eclipse.
+If needed, it can be rebuilt and executed in any Java-supported IDE.
 
 ## How to Run
 
-1. Download or clone the repository.
-2. Extract the project folder (if downloaded as ZIP).
-3. Navigate to the `out` directory.
-4. Run `run.bat`.
+1. Clone or download the repository
+2. Navigate to the `out` directory
+3. Run `run.bat`
 
-Alternatively, you can import the project into an IDE (such as Eclipse) and run it directly.
+Alternatively, import the project into an IDE and run it directly.
 
 ## Game Overview
 
-* The game board is a 2D matrix displayed in the console using symbols.
-* Players take turns moving across the board.
-* While moving, players can collect weapons found on the map.
-* Collected weapons are pushed onto a personal weapon stack.
-* When two players encounter each other, a battle occurs.
+* The game board is represented as a 2D matrix rendered in the console
+* Players take turns performing actions within a controlled game loop
+* Weapons are distributed across the map and can be collected during movement
+* Each player maintains a stack-based inventory of collected weapons
+* Player encounters trigger a battle sequence
 
-## Battle System
+## Combat System
 
-* During a battle, each player pops the top weapon from their stack.
-
-* The winner is determined by predefined weapon priorities:
-
+* Combat is resolved using a rule-based system built on weapon priorities:
   * FIREBALL defeats SWORD
   * SWORD defeats MAGIC_RING
   * MAGIC_RING defeats FIREBALL
+* Each player uses the top weapon from their stack
+* If both players use the same weapon, the attacker loses
+* Players without available weapons automatically lose the encounter
 
-* If both players use the same weapon, the loser is the attacker.
+## Technical Design
 
-* If a player has no weapon available, they automatically lose the round.
-
-## Purpose
-
-This project was created as part of a college assignment to practice:
-
-* Object-oriented programming
-* Data structures (stack usage)
-* Game loop design
-* Basic turn-based mechanics
+* Object-oriented structure with separation between game logic, entities, and board representation
+* Turn-based game loop controlling player actions and state transitions
+* Stack data structure used for managing player inventories
+* Modular combat system designed around rule-based interactions
